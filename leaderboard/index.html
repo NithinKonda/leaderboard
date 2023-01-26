@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" title="Coding design">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UCL</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <center>
+    <main class="table">
+        <section class="table__header">
+            <h1>LeaderBoard</h1>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" onclick="export_data()" value="Export">EXCEL <img src="images/excel.png" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table id="show">
+                <thead>
+                    <tr>
+                        <th> Rank<span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Score <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <main class="table-1" style="display:flex;">
+    <form style="display:flex;">
+        <div style="display:flex;">
+            <h3 style="margin-top:.5rem">Name:</h3>
+            <input type="text" name="fname" id="fname" class="test">
+        </div>
+
+        <div style="display:flex;">
+            <h3 style="margin-top:.5rem">Score:</h3>
+            <input type="text" name="score" id="score" class="test">
+        </div>
+        
+    </form>  
+        <button name="button" id="btn" onclick="addToLeaderboard()" class="but">Add</button>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</center>
+</body>
+
+</html>
